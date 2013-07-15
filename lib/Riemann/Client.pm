@@ -1,6 +1,6 @@
 package Riemann::Client;
 {
-  $Riemann::Client::VERSION = '0.01';
+  $Riemann::Client::VERSION = '0.02';
 }
 
 use Moo;
@@ -115,10 +115,10 @@ The Riemann server. Defaults to C<localhost>
 
 Port where the Riemann server is listening. Defaults to C<5555>
 
-=head3 use_udp
+=head3 proto
 
 By default Riemann::Client will use TCP to communicate over the network. You
-can force the usage of UDP setting this argument to true.
+can force the usage of UDP setting this argument to 'udp'.
 UDP datagrams have a maximum size of 16384 bytes by Riemann's default. If you
 force the usage of UDP and try to send a larger message, an exception will be
 raised.
@@ -155,6 +155,7 @@ This is the specification of the messages in L<Google::ProtocolBuffers> format:
       optional string description = 5;
       repeated string tags = 7;
       optional float ttl = 8;
+      repeated Attribute attributes = 9;
 
       optional sint64 metric_sint64 = 13;
       optional double metric_d = 14;
@@ -171,6 +172,11 @@ This is the specification of the messages in L<Google::ProtocolBuffers> format:
       repeated State states = 4;
       optional Query query = 5;
       repeated Event events = 6;
+    }
+
+    message Attribute {
+      required string key = 1;
+      optional string value = 2;
     }
 
 =head1 SEE ALSO

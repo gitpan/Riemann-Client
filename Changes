@@ -1,4 +1,11 @@
 Revision history for Riemann-Client
 
+0.02      2013-07-16 00:17:19 Europe/Madrid
+    HUGE thank you to tazle for spotting the issues and providing several
+    pull requests:
+    - Protocol spec updated
+    - TCP transport was always used
+    - Error in documentation fixed
+
 0.01      2012-12-29 01:32:28 Europe/Madrid
 Initial release
