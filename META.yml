@@ -6,10 +6,11 @@ build_requires:
   String::Random: 0
   Test::Exception: 0
   Test::More: 0
+  Test::TCP: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.131560'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -24,4 +25,4 @@ resources:
   bugtracker: https://github.com/miquelruiz/Riemann-Client/issues
   homepage: http://metacpan.org/release/Riemann-Client/
   repository: git://github.com/miquelruiz/Riemann-Client.git
-version: 0.02
+version: 0.03

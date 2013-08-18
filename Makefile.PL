@@ -28,9 +28,10 @@ my %WriteMakefileArgs = (
   "TEST_REQUIRES" => {
     "String::Random" => 0,
     "Test::Exception" => 0,
-    "Test::More" => 0
+    "Test::More" => 0,
+    "Test::TCP" => 0
   },
-  "VERSION" => "0.02",
+  "VERSION" => "0.03",
   "test" => {
     "TESTS" => "t/*.t"
   }
